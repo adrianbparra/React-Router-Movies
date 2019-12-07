@@ -16,7 +16,7 @@ body {
   margin: 1rem auto;
 }
 
-.movie-card:hover {
+.movie-list .movie-card:hover {
   padding: 1rem 1.8rem;
 }
 
