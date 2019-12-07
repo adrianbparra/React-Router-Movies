@@ -19,11 +19,22 @@ const MovieList = props => {
     
     getMovies();
   }, []);
+
+  
+
+  const saveMovie = (t) => {
+    console.log(this)
+    const addToSavedList = props.addToSavedList;
+    addToSavedList(movies[1])
+  }
+
+  console.log(props.location.pathname)
+  
   
   return (
     <div className="movie-list">
       {movies.map(movie => (
-        <MovieCard key={movie.id} movie={movie} />
+        <MovieCard key={movie.id} movie={movie} saveMovie={saveMovie} location={props.location.pathname}/>
       ))}
     </div>
   );
