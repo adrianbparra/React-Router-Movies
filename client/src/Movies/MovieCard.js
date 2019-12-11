@@ -5,21 +5,11 @@ import { Link } from "react-router-dom";
 
 
  
-function MovieCard({ movie, saveMovie ,location}) {
+function MovieCard({ movie, saveMovie}) {
   const { title, director, metascore, stars,id } = movie;
-
-  console.log(location)
   
-
-if(location){
-  var savemoviebutton = null
-} else {
-    var savemoviebutton = <div className="save-button" onClick={saveMovie}>Save</div>
-}
-  
-
   return (
-    <div className= "movie-card">
+    <div className= "movie-card" key={id}>
       <Link to={`/movies/${id}`}>
         <h2>{title}</h2>
         <div className="movie-director">
@@ -36,8 +26,7 @@ if(location){
           </div>
         ))}
       </Link>
-      {savemoviebutton}
-      {/* <div className="save-button" onClick={saveMovie}>Save</div> */}
+      <div className="save-button" onClick={()=>{saveMovie(movie)}}>Save</div>
     </div>
 
   );
