@@ -16,6 +16,20 @@ body {
   margin: 1rem auto;
 }
 
+.movie-list .movie-card:hover {
+  padding: 1rem 1.8rem;
+}
+
+.movie-card a {
+  color: black;
+  text-decoration: none;
+}
+
+.movie-card a:hover {
+  color: rgba(0, 0, 0, 0.616);
+}
+
+
 .movie-director {
   padding: 4px 0;
   font-size: 0.8rem;
